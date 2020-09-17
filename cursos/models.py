@@ -15,3 +15,13 @@ class Cursos(models.Model):
         verbose_name = 'Curso'
         verbose_name_plural = 'Cursos'
 
+
+class Competencias(models.Model):
+    name = models.CharField(verbose_name='Competencia', unique=True, max_length=255)
+
+    def __str__(self):
+        return "{0}".format(self.name)
+
+    class Meta:
+        verbose_name = 'Competencia'
+        verbose_name_plural = 'Competencias'
